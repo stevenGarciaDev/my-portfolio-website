@@ -1,5 +1,84 @@
 import React from 'react';
 import styled from 'styled-components';
+import PROJECTS_DATA from '../data/projects.data';
+import { withRouter } from 'react-router-dom';
+
+class ProjectDetail extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            projects: PROJECTS_DATA
+        };
+    }
+
+    render() {
+        const { id } = this.props.match.params;
+        const projectId = Number.parseInt(id);
+        console.log("id", typeof(id));
+        console.log("this.state.projects", this.state.projects);
+        const project = this.state.projects.find(p => p.id === projectId);
+        console.log("project", project);
+        return (
+            <ProjectDetailContainer>
+                <ProjectDescription>
+                    <ProjectOverview>
+                        <ProjectName>{project.name}</ProjectName>
+                    
+                        <SubTitle>Objective</SubTitle>
+                        <BriefDescription>{project.objective}</BriefDescription>
+
+                        <SubTitle>Solution</SubTitle>
+                        <BriefDescription>{project.solution}</BriefDescription>
+                    </ProjectOverview>
+                    <ProjectInfo>
+                        <InfoTitle>Project:</InfoTitle>
+                        <BriefDescription>Web Development Project</BriefDescription>
+
+                        <InfoTitle>Team:</InfoTitle>
+                        <BriefDescription>Senior Project Team of Four</BriefDescription>
+
+                        <InfoTitle>Tools:</InfoTitle>
+                        <BriefDescription>React, MongoDB, Node.js, Redux</BriefDescription>
+                    </ProjectInfo>
+                </ProjectDescription>
+                <ProjectName>Project Demo</ProjectName>
+                <VideoContainer>
+                    <VideoFrame  
+                        src="https://www.youtube.com/embed/DSjeK3jG12o" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></VideoFrame>
+                </VideoContainer> 
+                <ProjectName>UI Source Code</ProjectName>
+                <VideoContainer>
+                    <VideoFrame 
+                        src="https://www.youtube.com/embed/FdfkqW6UNZA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></VideoFrame>
+                </VideoContainer>
+                <ProjectName>API Source Code</ProjectName>
+                <VideoContainer>
+                    <VideoFrame 
+                        src="https://www.youtube.com/embed/FdfkqW6UNZA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></VideoFrame>
+                </VideoContainer>
+                <ButtonContainer>
+                    <Button>
+                        <a href='google.com'>Link to live hosted project</a>
+                    </Button>
+                    <Button>
+                        <a href='google.com'>Link to Github repo</a>
+                    </Button>
+                </ButtonContainer>
+            </ProjectDetailContainer>
+        );
+    }
+};
+
+export default withRouter(ProjectDetail);
 
 const ProjectDetailContainer = styled.div`
     display: flex;
@@ -81,60 +160,21 @@ const VideoFrame = styled.iframe`
     border: none;
 `;
 
-const ButtonLink = styled.a`
-    border: 1px solid #ccc;
-    width: 300px;
+const ButtonContainer = styled.div`
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
 `;
 
-const ProjectDetail = () => {
-    return (
-        <ProjectDetailContainer>
-            <ProjectDescription>
-                <ProjectOverview>
-                    <ProjectName>ProjectName</ProjectName>
-                
-                    <SubTitle>Objective</SubTitle>
-                    <BriefDescription>If you try some other numbers for userId, you will notice that the information being shown never changes. This is because I have hardcoded the ID value that is being queried from the API in UserInfo</BriefDescription>
-
-                    <SubTitle>Solution</SubTitle>
-                    <BriefDescription>If you try some other numbers for userId, you will notice that the information being shown never changes. This is because I have hardcoded the ID value that is being queried from the API in UserInfo</BriefDescription>
-                </ProjectOverview>
-                <ProjectInfo>
-                    <InfoTitle>Project:</InfoTitle>
-                    <BriefDescription>Web Development Project</BriefDescription>
-
-                    <InfoTitle>Team:</InfoTitle>
-                    <BriefDescription>Senior Project Team of Four</BriefDescription>
-
-                    <InfoTitle>Tools:</InfoTitle>
-                    <BriefDescription>React, MongoDB, Node.js, Redux</BriefDescription>
-                </ProjectInfo>
-            </ProjectDescription>
-            <VideoContainer>
-                <VideoFrame  
-                    src="https://www.youtube.com/embed/DSjeK3jG12o" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></VideoFrame>
-            </VideoContainer> 
-            <VideoContainer>
-                <VideoFrame 
-                    width="898" 
-                    height="427" 
-                    src="https://www.youtube.com/embed/FdfkqW6UNZA" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></VideoFrame>
-            </VideoContainer>
-            <div>
-                <div>
-                    <ButtonLink>link to live hosted project</ButtonLink>
-                </div>
-                <div>
-                    <ButtonLink>link to github repo</ButtonLink>
-                </div>
-            </div>
-        </ProjectDetailContainer>
-    );
-};
-
-export default ProjectDetail;
+const Button = styled.div` 
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+`;
