@@ -27,9 +27,9 @@ const PreviewImage = styled.img`
     width: 100%;
 `;
 
-const PortfolioPreview = ({ name, image }) => {
+const PortfolioPreview = ({ id, name, image }) => {
     return (
-        <ProjectLink to=''>
+        <ProjectLink to={`/project/${id}`}>
             <Container>
                 <div>
                     <PreviewImage src={image} /> 
