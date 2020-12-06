@@ -12,6 +12,16 @@ class ProjectDetail extends React.Component {
         };
     }
 
+    displayTools = (projectTools) => {
+        let tools = "";
+        for (let i = 0; i < projectTools.length; i++) {
+            const tool = projectTools[i];
+            tools = (i === 0) ? `${tool}` : `${tools}, ${tool}`;
+        }
+        return tools;
+        return "";
+    }
+
     render() {
         const { id } = this.props.match.params;
         const projectId = Number.parseInt(id);
@@ -25,42 +35,44 @@ class ProjectDetail extends React.Component {
                     <ProjectOverview>
                         <ProjectName>{project.name}</ProjectName>
                     
-                        <SubTitle>Objective</SubTitle>
+                        <SubTitle>Objective:</SubTitle>
                         <BriefDescription>{project.objective}</BriefDescription>
 
-                        <SubTitle>Solution</SubTitle>
+                        <SubTitle>Solution:</SubTitle>
                         <BriefDescription>{project.solution}</BriefDescription>
                     </ProjectOverview>
                     <ProjectInfo>
                         <InfoTitle>Project:</InfoTitle>
-                        <BriefDescription>Web Development Project</BriefDescription>
+                        <BriefDescription>{project.projectType}</BriefDescription>
 
                         <InfoTitle>Team:</InfoTitle>
-                        <BriefDescription>Senior Project Team of Four</BriefDescription>
+                        <BriefDescription>{project.team}</BriefDescription>
 
                         <InfoTitle>Tools:</InfoTitle>
-                        <BriefDescription>React, MongoDB, Node.js, Redux</BriefDescription>
+                        <BriefDescription>
+                            {this.displayTools(project.tools)}
+                        </BriefDescription>
                     </ProjectInfo>
                 </ProjectDescription>
-                <ProjectName>Project Demo</ProjectName>
+                <ProjectName>{project.video1.videoTitle}</ProjectName>
                 <VideoContainer>
                     <VideoFrame  
-                        src="https://www.youtube.com/embed/DSjeK3jG12o" 
+                        src={project.video1.videoURL} 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></VideoFrame>
                 </VideoContainer> 
-                <ProjectName>UI Source Code</ProjectName>
+                <ProjectName>{project.video2.videoTitle}</ProjectName>
                 <VideoContainer>
                     <VideoFrame 
-                        src="https://www.youtube.com/embed/FdfkqW6UNZA" 
+                        src={project.video2.videoURL}
                         frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></VideoFrame>
                 </VideoContainer>
-                <ProjectName>API Source Code</ProjectName>
+                <ProjectName>{project.video3.videoTitle}</ProjectName>
                 <VideoContainer>
                     <VideoFrame 
-                        src="https://www.youtube.com/embed/FdfkqW6UNZA" 
+                        src={project.video3.videoURL}
                         frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></VideoFrame>

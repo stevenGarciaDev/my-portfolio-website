@@ -20,10 +20,10 @@ const GridContainer = styled.div`
 const PortfolioSection = () => {
     return (
         <GridContainer>
-            <PortfolioPreview id='1' name='EasyMealPlanner' image={Image1} />
-            <PortfolioPreview id='2' name='MyRemoteTeam' image={Image1} />
-            <PortfolioPreview id='3' name='PhuketList' image={Image1} />
-            <PortfolioPreview id='4' name='Sustainability Project' image={Image1} />
+            <PortfolioPreview id='1' name='BugTracker Web App' image={Image1} />
+            <PortfolioPreview id='2' name='EasyMealPlanner Web App' image={Image1} />
+            <PortfolioPreview id='3' name='Thomson Reuters Internship' image={Image1} />
+            <PortfolioPreview id='4' name='BucketList Web App' image={Image1} />
         </GridContainer>
     );
 }
