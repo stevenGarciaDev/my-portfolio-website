@@ -19,7 +19,6 @@ class ProjectDetail extends React.Component {
             tools = (i === 0) ? `${tool}` : `${tools}, ${tool}`;
         }
         return tools;
-        return "";
     }
 
     render() {
@@ -61,28 +60,12 @@ class ProjectDetail extends React.Component {
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></VideoFrame>
                 </VideoContainer> 
-                <ProjectName>{project.video2.videoTitle}</ProjectName>
-                <VideoContainer>
-                    <VideoFrame 
-                        src={project.video2.videoURL}
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></VideoFrame>
-                </VideoContainer>
-                <ProjectName>{project.video3.videoTitle}</ProjectName>
-                <VideoContainer>
-                    <VideoFrame 
-                        src={project.video3.videoURL}
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></VideoFrame>
-                </VideoContainer>
                 <ButtonContainer>
                     <Button>
-                        <a href='google.com'>Link to live hosted project</a>
+                        <a href={project.linkToProject} target="_blank">Link to live hosted project</a>
                     </Button>
                     <Button>
-                        <a href='google.com'>Link to Github repo</a>
+                        <a href={project.linktoRepo} target="_blank">Link to Github repo</a>
                     </Button>
                 </ButtonContainer>
             </ProjectDetailContainer>

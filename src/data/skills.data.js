@@ -2,15 +2,13 @@ const Skills = [
     'JavaScript',
     'React',
     'Redux',
-    'Angular',
     'Node.js',
     'MySQL',
     'HTML',
     'CSS',
-    'SCSS',
-    'AWS',
-    'Docker',
-    'C#'
+    'ASP.NET Core',
+    'C#',
+    'Git',
 ];
 
 export default Skills;

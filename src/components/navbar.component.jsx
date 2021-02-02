@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
+import Resume from '../assets/StevenGarciaResume.pdf';
 
 class Navbar extends React.Component { 
     constructor(props) {
@@ -52,9 +53,9 @@ class Navbar extends React.Component {
                         <NavLink to='/about'>
                             ABOUT
                         </NavLink>
-                        <NavLink to='/'>
+                        <Anchor target="_blank" href={Resume}>
                             RESUME
-                        </NavLink>
+                        </Anchor>
                     </MenuOptions>
                 </div>
             </Nav>
@@ -80,6 +81,17 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
+    color: #fff;
+    margin: 10px;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover {
+        color: #ccc;
+    }
+`;
+
+const Anchor = styled.a`
     color: #fff;
     margin: 10px;
     font-size: 16px;

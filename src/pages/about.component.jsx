@@ -91,12 +91,11 @@ class About extends React.Component {
                             <br /><br />
                             My professional experience
                             is as a Software Developer Intern at Thomson Reuters where I contributed to
-                            features using the technologies of Angular, NgRx (Redux), and ASP.NET Core Web API.
+                            features using the technologies of JavaScript, Redux, and ASP.NET Core.
                             
                             <br /><br />
                             To improve my skills and demonstrate the value I can contribute to an organization, I have 
-                            built side projects that use the modern technologies of React, Node.js, as well as Angular,
-                            and C#.
+                            built side projects that use the modern technologies of React, Node.js, and C#.
 
                             <br /><br />
                             Outside of work, I enjoy working out, Brazilian Jiu-Jitsu, and attempting to cook new recipes. 

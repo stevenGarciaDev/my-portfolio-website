@@ -6,70 +6,31 @@ const PROJECTS_DATA = [
         solution: "Create a CRUD application to report bugs as well as demonstrate my skills in C# and JavaScript.",
         projectType: "Full-Stack Development Project",
         team: "Solo Project",
-        tools: ["AWS", "Jenkins", "C#", "ASP.NET Core", "React"],
+        tools: ["C#", "Azure", "ASP.NET Core", "Entity Framework", "SQL", "React", "Redux"],
         video1: {
             "videoTitle": "Project Demo",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
+            "videoURL": "https://www.youtube.com/embed/8A2Xrd-B1L0"
         },
-        video2: {
-            "videoTitle": "UI Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        video3: {
-            "videoTitle": "API Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        linkToProject: "",
-        linktoRepo: ""
+        linkToProject: "https://bugtracks.azurewebsites.net/",
+        linktoRepo: "https://github.com/stevenGarciaDev/BugTrackerUI"
     },
     {
         id: 2,
-        name: "EasyMealPlanner App",
-        objective: "Enable users to create a weekly diet plan and track their progress.",
-        solution: "Build a CRUD application to find, save, and eat recipes.",
-        projectType: "Full-Stack Development Project",
+        name: "Subreddit Timer App",
+        objective: "Develop a heatmap based on Reddit API to help users decide when to post on a subreddit.",
+        solution: "Build a front end React app for displaying heatmap.",
+        projectType: "Front-end Development Project",
         team: "Solo Project",
-        tools: ["AWS", "Jenkins", "React", "Jest", "Redux", "Node.js", "MongoDB"],
+        tools: ["React", "Styled Components", "React Router", "React Testing Library", "Jest"],
         video1: {
             "videoTitle": "Project Demo",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
+            "videoURL": "https://www.youtube.com/embed/TJbtIqBiDGI"
         },
-        video2: {
-            "videoTitle": "UI Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        video3: {
-            "videoTitle": "API Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        linkToProject: "",
-        linktoRepo: ""
+        linkToProject: "https://subreddit-timer.netlify.app/",
+        linktoRepo: "https://github.com/stevenGarciaDev/subreddit-timer"
     },
     {
         id: 3, 
-        name: "Thomson Reuters",
-        objective: "Contribute to Thomson Reuter's UI web product by completing sprint tasks.",
-        solution: "Develop features, participate in code reviews, and discuss progress in daily sprint meetings.",
-        projectType: "10 week Internship",
-        team: "Group of 6 Developers",
-        tools: ["Angular", "TypeScript", "SCSS", "NgRx (Redux)", "C#", "ASP.NET Core"],
-        video1: {
-            "videoTitle": "Feature 1: PageTitle",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        video2: {
-            "videoTitle": "Feature 2: Responsive Tab",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        video3: {
-            "videoTitle": "Feature 3: Maximize/Minimize Dialog",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        linkToProject: "",
-        linktoRepo: ""
-    },
-    {
-        id: 4, 
         name: "BucketList",
         objective: "Enable users to create a bucket list and connect with other people who have similar items.",
         solution: "Build a CRUD application for users to create a bucket list and connect using React and Node.js.",
@@ -78,18 +39,10 @@ const PROJECTS_DATA = [
         tools: ["React", "Redux", "Node.js", "MongoDB", "Heroku"],
         video1: {
             "videoTitle": "Project Demo",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
+            "videoURL": "https://www.youtube.com/embed/sXEq82xQ5jM"
         },
-        video2: {
-            "videoTitle": "UI Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        video3: {
-            "videoTitle": "API Source Code",
-            "videoURL": "https://www.youtube.com/embed/DSjeK3jG12o"
-        },
-        linkToProject: "",
-        linktoRepo: ""
+        linkToProject: "https://bucket-list-items.herokuapp.com/home",
+        linktoRepo: "https://github.com/stevenGarciaDev/MyBucketList-UI"
     }
 ];
 
