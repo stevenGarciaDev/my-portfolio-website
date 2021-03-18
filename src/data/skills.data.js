@@ -4,11 +4,13 @@ const Skills = [
     'Redux',
     'Node.js',
     'MySQL',
-    'HTML',
-    'CSS',
+    'HTML5',
+    'CSS3',
     'ASP.NET Core',
     'C#',
     'Git',
+    'Java',
+    'Spring Boot'
 ];
 
 export default Skills;
