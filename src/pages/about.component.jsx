@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Image from '../assets/img_4137-2.jpg';
+import AboutMeImage from '../assets/aboutMePic.jpg';
 import Skill from '../components/skill.component';
 
 import SKILLS_DATA from '../data/skills.data';
@@ -82,7 +82,7 @@ class About extends React.Component {
                     <Title>More about me</Title>
                     <BiographyContainer>
                         <div>
-                            <Photo src={Image} /> 
+                            <Photo src={AboutMeImage} /> 
                         </div>
                         <BiographyContent>
                             Hi, I am Steven. I am passionate to continually learn new technologies 
@@ -95,7 +95,7 @@ class About extends React.Component {
                             
                             <br /><br />
                             To improve my skills and demonstrate the value I can contribute to an organization, I have 
-                            built side projects that use the modern technologies of React, Node.js, and C#.
+                            built side projects using HTML5, CSS3, React, Node.js, SQL, Java, and C#.
 
                             <br /><br />
                             Outside of work, I enjoy working out, Brazilian Jiu-Jitsu, and attempting to cook new recipes. 
