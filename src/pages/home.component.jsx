@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import PortfolioSection from '../components/portfolio-section.component';
 
 import Image from '../assets/stevenPicCircle.png';
+import AboutMeImage from '../assets/aboutMePic.jpg';
 
 const Header = styled.div`
     display: flex;
@@ -55,6 +56,7 @@ const Home = () => (
             </div>
         </Header>
         <PortfolioSection />
+        <Photo src={AboutMeImage} style={{display: "none" }} /> 
     </div>
 );
 
