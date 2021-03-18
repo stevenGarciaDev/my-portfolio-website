@@ -9,18 +9,26 @@ import Home from './pages/home.component';
 import About from './pages/about.component';
 import ProjectDetail from './pages/project-detail.component';
 
+import styled from 'styled-components';
+
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Switch>
-        <Route path='/about' component={About} />
-        <Route path='/project/:id' component={ProjectDetail} />
-        <Route path='/' component={Home} />
-      </Switch>
+      <MainContent>
+        <Switch>
+          <Route path='/about' component={About} />
+          <Route path='/project/:id' component={ProjectDetail} />
+          <Route path='/' component={Home} />
+        </Switch>
+      </MainContent>
       <Footer />
     </div>
   );
 }
+
+const MainContent = styled.div`
+  padding-top: 70px;
+`;
 
 export default App;

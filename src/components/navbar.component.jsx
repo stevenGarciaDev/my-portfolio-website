@@ -14,7 +14,6 @@ class Navbar extends React.Component {
     }
 
     onTabDropdown = () => {
-        console.log("clicked");
         const { isMenuClosed } = this.state;
         this.setState({ isMenuClosed: !isMenuClosed });
     }
@@ -44,7 +43,9 @@ class Navbar extends React.Component {
                         />
                     }
 
-                    <MenuOptions style={{
+                    <MenuOptions
+                        onClick={this.onTabDropdown}
+                        style={{
                         visibility: `${isMenuClosed ? 'hidden' : 'visible'}`
                     }}>
                         <NavLink to='/'>
@@ -74,9 +75,14 @@ const Nav = styled.nav`
     background-color: #2c3e50;
     border-bottom: 1px solid white;
     padding: 0px 10px;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 20px);
+    z-index: 4;
 
     @media (min-width: 700px) {
         padding: 0px 20px;
+        width: calc(100% - 40px);
     }
 `;
 
