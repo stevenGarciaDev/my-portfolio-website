@@ -94,7 +94,7 @@ const ProjectDescription = styled.div`
     }
 `;
 
-const ProjectName = styled.h1`;
+const ProjectName = styled.h1`
     color: #2c3e50;
 `;
 

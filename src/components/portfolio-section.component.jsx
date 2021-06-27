@@ -22,9 +22,10 @@ const GridContainer = styled.div`
 const PortfolioSection = () => {
     return (
         <GridContainer>
-            <PortfolioPreview id='1' name='BugTracker Web App' image={BugTrackerImage} />
-            <PortfolioPreview id='2' name='Subreddit Timer' image={SubredditImage} />
-            <PortfolioPreview id='3' name='BucketList Web App' image={BucketListImage} />
+            <PortfolioPreview id='1' name='EasyMealPlanners Web App' image={BugTrackerImage} />
+            <PortfolioPreview id='2' name='BugTracker Web App' image={BugTrackerImage} />
+            <PortfolioPreview id='3' name='Subreddit Timer' image={SubredditImage} />
+            <PortfolioPreview id='4' name='BucketList Web App' image={BucketListImage} />
         </GridContainer>
     );
 }
