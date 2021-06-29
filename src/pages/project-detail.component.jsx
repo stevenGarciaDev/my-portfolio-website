@@ -24,10 +24,7 @@ class ProjectDetail extends React.Component {
     render() {
         const { id } = this.props.match.params;
         const projectId = Number.parseInt(id);
-        console.log("id", typeof(id));
-        console.log("this.state.projects", this.state.projects);
         const project = this.state.projects.find(p => p.id === projectId);
-        console.log("project", project);
         return (
             <ProjectDetailContainer>
                 <ProjectDescription>
@@ -62,10 +59,10 @@ class ProjectDetail extends React.Component {
                 </VideoContainer> 
                 <ButtonContainer>
                     <Button>
-                        <a href={project.linkToProject} target="_blank">Link to live hosted project</a>
+                        <a href={project.linkToProject} target="_blank" rel="noopener noreferrer">Link to live hosted project</a>
                     </Button>
                     <Button>
-                        <a href={project.linktoRepo} target="_blank">Link to Github repo</a>
+                        <a href={project.linktoRepo} target="_blank" rel="noopener noreferrer">Link to Github repo</a>
                     </Button>
                 </ButtonContainer>
             </ProjectDetailContainer>

@@ -39,6 +39,7 @@ const Footer = () => {
                     <a 
                         href='https://www.linkedin.com/in/steven-garcia-24981611a/' 
                         target='_blank'
+                        rel="noopener noreferrer"
                         style={{ color: 'white' }}>
                         <LinkedInIcon fontSize='large' style={{ fontSize: '50px' }}  />
                     </a>
@@ -47,6 +48,7 @@ const Footer = () => {
                     <a 
                         href='https://github.com/stevenGarciaDev'
                         target='_blank'
+                        rel="noopener noreferrer"
                         style={{ color: 'white' }}>
                         <GitHubIcon fontSize='large' style={{ fontSize: '50px' }}  />
                     </a>
