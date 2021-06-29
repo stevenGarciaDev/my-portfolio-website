@@ -24,7 +24,7 @@ const PROJECTS_DATA = [
             "Route53"],
         video1: {
             "videoTitle": "Project Demo",
-            "videoURL": "https://www.youtube.com/embed/8A2Xrd-B1L0"
+            "videoURL": "https://www.youtube.com/embed/9KedpGfz2kg"
         },
         linkToProject: "https://easymealplanners.com",
         linktoRepo: ""
