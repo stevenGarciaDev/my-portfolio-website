@@ -27,7 +27,7 @@ const PROJECTS_DATA = [
             "videoURL": "https://www.youtube.com/embed/9KedpGfz2kg"
         },
         linkToProject: "https://easymealplanners.com",
-        linktoRepo: ""
+        linktoRepo: "https://github.com/stevenGarciaDev/easymealplanner-ui"
     },
     {
         id: 2, 
