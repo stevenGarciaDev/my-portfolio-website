@@ -41,7 +41,7 @@ const PROJECTS_DATA = [
             "videoTitle": "Project Demo",
             "videoURL": "https://www.youtube.com/embed/8A2Xrd-B1L0"
         },
-        linkToProject: "",
+        linkToProject: "https://my-bugtracks.herokuapp.com/",
         linktoRepo: "https://github.com/stevenGarciaDev/BugTrackerUI"
     },
     {
