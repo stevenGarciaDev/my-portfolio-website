@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PortfolioPreview from './portfolio-preview.component';
 
 import EasyMealPlannerImage from '../assets/EasyMealPlannerPic.png';
-import BugTrackerImage from '../assets/BugTrackerPic2.png';
+import BugTrackerImage from '../assets/BugTrackerPic.png';
 import SubredditImage from '../assets/SubredditTimer.png';
 import BucketListImage from '../assets/PhuketListPreview.png';
 
