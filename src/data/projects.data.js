@@ -36,7 +36,7 @@ const PROJECTS_DATA = [
         solution: "Create a CRUD application to report bugs as well as demonstrate my skills in C# and JavaScript.",
         projectType: "Full-Stack Development Project",
         team: "Solo Project",
-        tools: ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "React", "Redux"],
+        tools: ["C#", "ASP.NET Core", "Entity Framework", "PostgreSQL", "React", "Redux"],
         video1: {
             "videoTitle": "Project Demo",
             "videoURL": "https://www.youtube.com/embed/8A2Xrd-B1L0"
