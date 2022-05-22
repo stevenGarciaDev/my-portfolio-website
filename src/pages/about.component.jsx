@@ -6,6 +6,68 @@ import Skill from '../components/skill.component';
 
 import SKILLS_DATA from '../data/skills.data';
 
+class About extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            skills: SKILLS_DATA
+        };
+    }
+
+    render() {
+        const { skills } = this.state;
+        const { isNavOpen } = this.props;
+        return (
+            <Container isNavOpen={isNavOpen}>
+                <SkillsContainer>
+                    <Title style={{ color: 'white' }}>Skills</Title>
+                    <SkillItemsGrid>
+                        {
+                            skills.map(skill => <Skill name={skill} />)
+                        }
+                    </SkillItemsGrid>
+                </SkillsContainer>
+                <div>
+                    <Title>More about me</Title>
+                    <BiographyContainer>
+                        <div>
+                            <Photo src={AboutMeImage} /> 
+                        </div>
+                        <BiographyContent>
+                            Hi, I am Steven. I am passionate to continually learn new technologies 
+                            and improve my skills to build great applications. 
+                            
+                            <br /><br />
+                            My professional experience is as a Software Engineer at Toshiba where I contribute
+                            to developing front-end client applications and backend RESTful APIs.
+
+                            <br /><br />
+                            Previously I was a Software Developer Intern at Thomson Reuters where I contributed to
+                            features using the technologies of JavaScript, Redux, and ASP.NET Core.
+                            
+                            <br /><br />
+                            To improve my skills and demonstrate the value I can contribute to an organization, I have 
+                            built side projects using HTML5, CSS3, React, Node.js, SQL, Java, and C#.
+
+                            <br /><br />
+                            Outside of work, I enjoy working out, Brazilian Jiu-Jitsu, and attempting to cook new recipes. 
+                        </BiographyContent>
+                    </BiographyContainer>
+                </div>
+            </Container>
+        );
+    }
+}
+
+const Container = styled.div`
+    margin-top: ${props => props.isNavOpen ? '110px' : '0px'};
+
+    @media (min-width: 700px) {
+        margin-top: 0px;
+    }
+`;
+
 const Photo = styled.img`
     border-radius: 5px;
     height: 400px;
@@ -56,55 +118,5 @@ const BiographyContent = styled.div`
         width: 500px;
     }
 `;
-
-class About extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            skills: SKILLS_DATA
-        };
-    }
-
-    render() {
-        const { skills } = this.state;
-        return (
-            <div>
-                <SkillsContainer>
-                    <Title style={{ color: 'white' }}>Skills</Title>
-                    <SkillItemsGrid>
-                        {
-                            skills.map(skill => <Skill name={skill} />)
-                        }
-                    </SkillItemsGrid>
-                </SkillsContainer>
-                <div>
-                    <Title>More about me</Title>
-                    <BiographyContainer>
-                        <div>
-                            <Photo src={AboutMeImage} /> 
-                        </div>
-                        <BiographyContent>
-                            Hi, I am Steven. I am passionate to continually learn new technologies 
-                            and improve my skills to build great applications. 
-                            
-                            <br /><br />
-                            My professional experience
-                            is as a Software Developer Intern at Thomson Reuters where I contributed to
-                            features using the technologies of JavaScript, Redux, and ASP.NET Core.
-                            
-                            <br /><br />
-                            To improve my skills and demonstrate the value I can contribute to an organization, I have 
-                            built side projects using HTML5, CSS3, React, Node.js, SQL, Java, and C#.
-
-                            <br /><br />
-                            Outside of work, I enjoy working out, Brazilian Jiu-Jitsu, and attempting to cook new recipes. 
-                        </BiographyContent>
-                    </BiographyContainer>
-                </div>
-            </div>
-        );
-    }
-}
 
 export default About;

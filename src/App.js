@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
@@ -12,19 +12,21 @@ import ProjectDetail from './pages/project-detail.component';
 import styled from 'styled-components';
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <MainContent>
-        <Switch>
-          <Route path='/about' component={About} />
-          <Route path='/project/:id' component={ProjectDetail} />
-          <Route path='/' component={Home} />
-        </Switch>
-      </MainContent>
-      <Footer />
-    </div>
-  );
+	const [isNavOpen, toggleNavStatus] = useState(false);
+
+	return (
+		<div className="App">
+			<Navbar isNavOpen={isNavOpen} toggleNavStatus={toggleNavStatus} />
+			<MainContent>
+				<Switch>
+					<Route path='/about' render={(props) => <About isNavOpen={isNavOpen} {...props} />} />
+					<Route path='/project/:id' render={(props) => <ProjectDetail isNavOpen={isNavOpen} {...props} />} />
+					<Route path='/' render={(props) => <Home isNavOpen={isNavOpen} {...props} />} />
+				</Switch>
+			</MainContent>
+		<Footer />
+		</div>
+	);
 }
 
 const MainContent = styled.div`

@@ -14,12 +14,11 @@ class Navbar extends React.Component {
     }
 
     onTabDropdown = () => {
-        const { isMenuClosed } = this.state;
-        this.setState({ isMenuClosed: !isMenuClosed });
+        this.props.toggleNavStatus(!this.props.isNavOpen);
     }
 
     render() {
-        const { isMenuClosed } = this.state;
+        const { isNavOpen } = this.props;
         return (
             <Nav>
                 <div>
@@ -29,24 +28,22 @@ class Navbar extends React.Component {
                 </div>
                 <div>
                     { 
-                        isMenuClosed ? 
-                        <HamburgerMenuIcon 
-                            active={isMenuClosed}
-                            fontSize='large' 
-                            onClick={this.onTabDropdown} 
-                        />
-                        :
-                        <CloseMenuIcon 
-                            active={!isMenuClosed}
+                        isNavOpen ? 
+                        <CloseMenuIcon
                             fontSize='large' 
                             onClick={this.onTabDropdown}
                         />
+                        :
+                        <HamburgerMenuIcon
+                            fontSize='large' 
+                            onClick={this.onTabDropdown} 
+                        /> 
                     }
 
                     <MenuOptions
                         onClick={this.onTabDropdown}
                         style={{
-                        visibility: `${isMenuClosed ? 'hidden' : 'visible'}`
+                        visibility: `${isNavOpen ? 'visible' : 'hidden'}`
                     }}>
                         <NavLink to='/'>
                             PORTFOLIO
@@ -67,13 +64,13 @@ class Navbar extends React.Component {
 export default Navbar;
 
 const Nav = styled.nav`
-    display: flex;
-    height: 70px;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background-color: #2c3e50;
     border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    justify-content: space-between;
     padding: 0px 10px;
     position: fixed;
     top: 0;
@@ -88,8 +85,8 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
     color: #fff;
-    margin: 10px;
     font-size: 16px;
+    margin: 10px;
     text-decoration: none;
 
     &:hover {
@@ -99,8 +96,8 @@ const NavLink = styled(Link)`
 
 const Anchor = styled.a`
     color: #fff;
-    margin: 10px;
     font-size: 16px;
+    margin: 10px;
     text-decoration: none;
 
     &:hover {
@@ -128,15 +125,15 @@ const CloseMenuIcon = styled(ClearIcon)`
 
 const MenuOptions = styled.div`
     background-color: #2c3e50;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
     display: flex;
     flex-direction: column;
+    left: 0;
     padding-left: 10px;
     position: absolute;
     top: 60px;
-    left: 0;
     width: 100%;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
     z-index: 10;
 
     @media (min-width: 700px) {
