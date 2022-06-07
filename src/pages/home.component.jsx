@@ -16,7 +16,7 @@ const Home = ({ isNavOpen }) => (
                 <Description>
                     I'm Steven Garcia, a Software Engineer and Computer Science 
                     graduate of Cal State Long Beach. Currently I'm an Engineer at Toshiba America Business Solutions
-                    where I work in Angular, C#, and .NET. Below 
+                    where I work in Angular, TypeScript, C#, and .NET. Below 
                     are my projects which display my skill-set for front-end and back-end web development.
                 </Description>
             </div>
